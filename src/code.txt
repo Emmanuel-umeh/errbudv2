@@ -1,0 +1,117 @@
+ <Box bg={"#EFF3FF"} mt={"54px"}>
+        <VStack mt={"64.3px"}>
+          <Text color={"primary"} fontWeight={500} fontSize={"16px"}>
+            FAQs
+          </Text>
+          <Heading
+            fontWeight={600}
+            fontSize={"36px"}
+            width={"502px"}
+            height={"86px"}
+            textAlign={"center"}
+          >
+            Quick Answers Before You Reach Out
+          </Heading>
+        </VStack>
+        {/* Accordion */}
+        <Box px={"133px"} pt={"77px"}>
+          <Accordion>
+            <AccordionItem
+              border={"1px solid #ffff"}
+              rounded={"15px"}
+              bg={"#ffff"}
+              boxShadow="base"
+              mb={"24px"}
+            >
+              <Heading>
+                <AccordionButton>
+                  <Box as="span" flex="1" textAlign="left">
+                    <Heading
+                      fontSize={"20px"}
+                      fontWeight={600}
+                      color={"#1D2739"}
+                    >
+                      How do I book a cleaner?
+                    </Heading>
+                  </Box>
+                  <IoIosAddCircleOutline
+                    style={{ width: "32px", height: "32px" }}
+                  />
+                </AccordionButton>
+              </Heading>
+              <AccordionPanel pb={4}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </AccordionPanel>
+            </AccordionItem>
+            <AccordionItem
+              border={"1px solid #ffff"}
+              rounded={"15px"}
+              bg={"#ffff"}
+              boxShadow="base"
+              mb={"24px"}
+            >
+              <Heading>
+                <AccordionButton>
+                  <Box as="span" flex="1" textAlign="left">
+                    <Heading
+                      fontSize={"20px"}
+                      fontWeight={600}
+                      color={"#1D2739"}
+                    >
+                      Are your cleaners verified?
+                    </Heading>
+                  </Box>
+                  <IoIosAddCircleOutline
+                    style={{ width: "32px", height: "32px" }}
+                  />
+                </AccordionButton>
+              </Heading>
+              <AccordionPanel pb={4}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </AccordionPanel>
+            </AccordionItem>
+            <AccordionItem
+              border={"1px solid #ffff"}
+              rounded={"15px"}
+              bg={"#ffff"}
+              boxShadow="base"
+            >
+              <Heading>
+                <AccordionButton>
+                  <Box as="span" flex="1" textAlign="left">
+                    <Heading
+                      fontSize={"20px"}
+                      fontWeight={600}
+                      color={"#1D2739"}
+                    >
+                      Do you offer business contracts?
+                    </Heading>
+                  </Box>
+                  <IoIosAddCircleOutline
+                    style={{ width: "32px", height: "32px" }}
+                  />
+                </AccordionButton>
+              </Heading>
+              <AccordionPanel pb={4}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
+        </Box>
+
+        {/* CTA section */}
+        <Stack mt={"113px"} mb={"80px"}>
+          <Box px={"163px"}>
+            <CTA />
+          </Box>
+        </Stack>
+      </Box>
