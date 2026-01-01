@@ -84,12 +84,15 @@ export default function Home() {
         </Box>
       </VStack>
 
-      {/* image */}
+      {/* Hero image */}
       <Image
-        src="/images/hero-img.png"
+        src="/images/banner-new.png"
         alt="hero image"
         width={"100%"}
         height={"100%"}
+        style={{
+          borderRadius: "0% 0% 71% 71% / 10% 10% 12% 12% ",
+        }}
       />
 
       {/* How it works */}
@@ -97,13 +100,13 @@ export default function Home() {
       <Box mt={{ base: "10px", md: "83.92px" }} position="relative">
         {/* Decorative vector images scattered around */}
         <Image
-          src="/images/left-star.png"
+          src="/images/how-it-work-star.png"
           alt="star left"
           position="absolute"
           top={"20px"}
-          left="60px"
-          width="87.13px"
-          height="112.61px"
+          left="40px"
+          width={{ base: "120px", md: "114px" }}
+          height={{ base: "120px", md: "110px" }}
           display={{ base: "none", md: "block" }}
         />
         <Image
@@ -117,21 +120,7 @@ export default function Home() {
           zIndex={3}
         />
 
-        {/* Video star Desktp */}
-        <Image
-          src="/images/video-star.png"
-          alt="video star"
-          position="absolute"
-          bottom={{ base: "", md: "650px" }}
-          top={{ base: "720px", md: "" }}
-          right={{ base: "260px", md: "" }}
-          left={{ base: "", md: "472px" }}
-          width="126.81px"
-          height="99.39px"
-          display={{ base: "block", md: "none" }}
-        />
-
-        {/* Video star Mobile */}
+        {/* Video star desktop */}
         <Image
           src="/images/video-star.png"
           alt="video star"
@@ -143,16 +132,25 @@ export default function Home() {
           display={{ base: "none", md: "block" }}
         />
 
-        {/* Single Star mobile */}
+        {/* Video star mobile */}
+        <Image
+          src="/images/video-star.png"
+          alt="video star"
+          position="absolute"
+          top="695px"
+          right="265px"
+          width="110px"
+          height="100px"
+          display={{ base: "block", md: "none" }}
+        />
 
+        {/* Single Star mobile */}
         <Image
           src="/images/single-star.png"
           alt="single star"
           position="absolute"
-          bottom={{ base: "", md: "650px" }}
-          right={{ base: "", md: "472px" }}
-          top={{ base: "720px", md: "" }}
-          left={{ base: "300px", md: "" }}
+          top="700px"
+          left="300px"
           width="57.58px"
           height="57.58px"
           display={{ base: "block", md: "none" }}
@@ -183,73 +181,75 @@ export default function Home() {
         />
 
         {/* Main content */}
-        <SimpleGrid
-          columns={{ base: 1, md: 2 }}
-          px={{ base: "16px", md: "163px" }}
-          id="how-it-works"
-        >
-          <Box>
-            <Image
-              src="/images/left-star.png"
-              alt="star left"
-              width="87.13px"
-              height="112.61px"
-              display={{ base: "block", md: "none" }}
-            />
+        <Box>
+          <Image
+            src="/images/left-star.png"
+            alt="star left"
+            width={{ base: "80px", md: "100px" }}
+            height={{ base: "80px", md: "100px" }}
+            display={{ base: "block", md: "none" }}
+          />
 
-            <Text
-              fontSize={{ base: "14px", md: "16px" }}
-              fontWeight={500}
-              color="primary"
-            >
-              HOW IT WORKS
-            </Text>
-
-            <Heading
-              color="#1D2739"
-              fontWeight={600}
-              fontSize={{ base: "24px", md: "36px" }}
-              lineHeight={{ base: "120%", md: "normal" }}
-              mb="8px"
-            >
-              Your Go-To Platform for
-              <Box as="br" display={{ base: "none", md: "block" }} />
-              Trusted Cleaning Services
-            </Heading>
-
-            <Text
-              fontWeight={500}
-              fontSize={{ base: "14px", md: "18px" }}
-              color="#667185"
-              lineHeight="145%"
-            >
-              Errbud is a modern cleaning service platform that{" "}
-              <Box as="br" display={{ base: "none", md: "block" }} />
-              connects everyday users and businesses to qualified{" "}
-              <Box as="br" display={{ base: "none", md: "block" }} />
-              and verified cleaners—called Errbuddies. Whether it’s{" "}
-              <Box as="br" display={{ base: "none", md: "block" }} />
-              your home, office, restaurant, school, or short-let
-              <Box as="br" display={{ base: "none", md: "block" }} />
-              apartment, Errbud makes it easy to book and manage{" "}
-              <Box as="br" display={{ base: "none", md: "block" }} />
-              cleaning services from your phone.
-            </Text>
-          </Box>
-
-          <Box
-            pt="45px"
-            position="relative" // 👈 VERY IMPORTANT
-            zIndex={{ base: 10, md: "auto" }}
+          <SimpleGrid
+            columns={{ base: 1, md: 2 }}
+            px={{ base: "16px", md: "163px" }}
+            id="how-it-works"
           >
-            <Image
-              src="/images/hero-image-2.png"
-              alt="hero image"
-              height={{ base: "267.84px", md: "370px" }}
-              width={{ base: "367.57px", md: "507.78px" }}
-            />
-          </Box>
-        </SimpleGrid>
+            <Box>
+              <Text
+                fontSize={{ base: "14px", md: "16px" }}
+                fontWeight={500}
+                color="primary"
+              >
+                HOW IT WORKS
+              </Text>
+
+              <Heading
+                color="#1D2739"
+                fontWeight={600}
+                fontSize={{ base: "24px", md: "36px" }}
+                lineHeight={{ base: "120%", md: "normal" }}
+                mb="8px"
+              >
+                Your Go-To Platform for
+                <Box as="br" display={{ base: "none", md: "block" }} />
+                Trusted Cleaning Services
+              </Heading>
+
+              <Text
+                fontWeight={500}
+                fontSize={{ base: "14px", md: "18px" }}
+                color="#667185"
+                lineHeight="145%"
+              >
+                Errbud is a modern cleaning service platform that{" "}
+                <Box as="br" display={{ base: "none", md: "block" }} />
+                connects everyday users and businesses to qualified{" "}
+                <Box as="br" display={{ base: "none", md: "block" }} />
+                and verified cleaners—called Errbuddies. Whether it’s{" "}
+                <Box as="br" display={{ base: "none", md: "block" }} />
+                your home, office, restaurant, school, or short-let
+                <Box as="br" display={{ base: "none", md: "block" }} />
+                apartment, Errbud makes it easy to book and manage{" "}
+                <Box as="br" display={{ base: "none", md: "block" }} />
+                cleaning services from your phone.
+              </Text>
+            </Box>
+
+            <Box
+              pt="45px"
+              position="relative"
+              zIndex={{ base: 10, md: "auto" }}
+            >
+              <Image
+                src="/images/hero-image-2.png"
+                alt="hero image"
+                height={{ base: "267.84px", md: "370px" }}
+                width={{ base: "367.57px", md: "507.78px" }}
+              />
+            </Box>
+          </SimpleGrid>
+        </Box>
 
         {/* Video area */}
         <VStack mt="64px" pt="54px" id="video-area">
@@ -347,11 +347,11 @@ export default function Home() {
 
       {/* Testimonials */}
       <Box
-        bg={"#EFF3FF"}
-        mt={"54px"}
-        py={"63.97px"}
+        bg="#EFF3FF"
+        mt="54px"
+        py="63.97px"
         px={{ base: "16px", md: "163px" }}
-        style={{ borderRadius: "47% 100% 53% 48% / 6% 12% 10% 14% " }}
+        style={{ borderRadius: "47% 100% 53% 48% / 6% 12% 10% 14%" }}
         id="testimonials"
       >
         <SimpleGrid columns={{ base: 1, md: 2 }}>
@@ -360,26 +360,26 @@ export default function Home() {
               <Text
                 fontSize={{ base: "14px", md: "16px" }}
                 fontWeight={500}
-                color={"primary"}
+                color="primary"
               >
                 TESTIMONIAL
               </Text>
 
               <Heading
-                color={"#1D2739"}
+                color="#1D2739"
                 fontWeight={600}
                 fontSize={{ base: "24px", md: "36px" }}
-                mb={"8px"}
+                mb="8px"
               >
                 Trusted by Homes & Businesses
               </Heading>
 
-              {/* For Desktop */}
+              {/* Desktop */}
               <Text
                 fontWeight={500}
-                fontSize={"18px"}
-                color={"#667185"}
-                lineHeight={"145%"}
+                fontSize="18px"
+                color="#667185"
+                lineHeight="145%"
                 display={{ base: "none", md: "block" }}
               >
                 From busy professionals to families and businesses, <br />
@@ -387,12 +387,12 @@ export default function Home() {
                 <br /> and ease of use.
               </Text>
 
-              {/* For Mobile */}
+              {/* Mobile */}
               <Text
                 fontWeight={400}
-                fontSize={"14px"}
-                color={"#667185"}
-                lineHeight={"145%"}
+                fontSize="14px"
+                color="#667185"
+                lineHeight="145%"
                 display={{ base: "block", md: "none" }}
               >
                 From busy professionals to families and businesses, <br />
@@ -402,8 +402,32 @@ export default function Home() {
             </Box>
           </Center>
 
-          <Box pt={{ base: "37px", md: "" }}>
+          <Box pt={{ base: "37px", md: "0" }} position="relative">
+            {/* Top fade overlay */}
+            <Box
+              position="absolute"
+              top="0"
+              left="0"
+              right="0"
+              h="80px"
+              zIndex={2}
+              pointerEvents="none"
+              bgGradient="linear(to-b, #EFF3FF 0%, rgba(239,243,255,0) 100%)"
+            />
+
             <TestimonialScroller />
+
+            {/* Bottom fade overlay */}
+            <Box
+              position="absolute"
+              bottom="0"
+              left="0"
+              right="0"
+              h="80px"
+              zIndex={2}
+              pointerEvents="none"
+              bgGradient="linear(to-t, #EFF3FF 0%, rgba(239,243,255,0) 100%)"
+            />
           </Box>
         </SimpleGrid>
       </Box>
@@ -421,10 +445,10 @@ export default function Home() {
           alt="star left"
           position="absolute"
           display={{ base: "none", md: "block" }}
-          bottom="400px"
-          left="30px"
-          width="84.07px"
-          height="108.65px"
+          top="100px"
+          left="25px"
+          width="130px"
+          height="125px"
         />
 
         {/* Right star */}
@@ -433,10 +457,11 @@ export default function Home() {
           alt="star right"
           position="absolute"
           display={{ base: "none", md: "block" }}
-          top="43%"
+          top="50%"
+          transform="translateY(-50%)"
           right="90px"
-          width="102.56px"
-          height="132.54px"
+          width="130px"
+          height="125px"
         />
 
         <CTA />

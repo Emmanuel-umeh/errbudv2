@@ -65,33 +65,56 @@ const Navbar = () => {
         />
       </HStack>
 
-      {/* Mobile Menu */}
-      <Collapse in={isOpen} animateOpacity>
-        <VStack
-          px="20px"
-          pb="24px"
-          spacing="16px"
-          alignItems="center"
-          display={{ base: "flex", md: "none" }}
-          flexDirection={{ base: "column" }}
-        >
-          <Link href="#how-it-works" onClick={onToggle}>
-            How it Works
-          </Link>
+      {/* Mobile Menu Overlay */}
+      {isOpen && (
+        <>
+          {/* Backdrop */}
+          <Box
+            position="fixed"
+            top="0"
+            left="0"
+            w="100vw"
+            h="100vh"
+            bg="rgba(0, 0, 0, 0.4)"
+            zIndex={999}
+            onClick={onToggle}
+          />
 
-          <Link href="#video-area" onClick={onToggle}>
-            Video Area
-          </Link>
+          {/* Menu */}
+          <Box
+            position="fixed"
+            top="0"
+            left="0"
+            right="0"
+            bg="white"
+            zIndex={1000}
+            px="20px"
+            pt="96px"
+            pb="32px"
+            borderBottomRadius="16px"
+            display={{ base: "block", md: "none" }}
+            animation="slideDown 0.25s ease-out"
+          >
+            <VStack spacing="20px" alignItems="center">
+              <Link href="#how-it-works" onClick={onToggle}>
+                How it Works
+              </Link>
 
-          <Link href="#testimonials" onClick={onToggle}>
-            Testimonials
-          </Link>
+              <Link href="#video-area" onClick={onToggle}>
+                Video Area
+              </Link>
 
-          <Link href="/contact-us" onClick={onToggle}>
-            Contact
-          </Link>
-        </VStack>
-      </Collapse>
+              <Link href="#testimonials" onClick={onToggle}>
+                Testimonials
+              </Link>
+
+              <Link href="/contact-us" onClick={onToggle}>
+                Contact
+              </Link>
+            </VStack>
+          </Box>
+        </>
+      )}
     </Box>
   );
 };

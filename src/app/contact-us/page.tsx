@@ -32,12 +32,15 @@ const Page = () => {
         backgroundSize="cover"
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
-        pl={{ base: 6, md: "49.81px" }}
-        pr={{ base: 6, md: "50.19px" }}
+        // pl={{ base: 6, md: "49.81px" }}
+        // pr={{ base: 6, md: "50.19px" }}
         py={{ base: 8, md: "22px" }}
       >
         {/* Top Navigation */}
-        <ContactUsNav />
+
+        <Box>
+          <ContactUsNav />
+        </Box>
 
         <Divider borderColor="white" />
 
@@ -47,6 +50,8 @@ const Page = () => {
           spacing={{ base: "72px", md: "135px" }}
           alignItems="center"
           mt={"55px"}
+          pl={{ base: 6, md: "49.81px" }}
+          pr={{ base: 6, md: "50.19px" }}
         >
           {/* Left Content */}
           <Stack spacing={"8px"}>
@@ -187,14 +192,13 @@ const Page = () => {
         <Box px={{ base: "16px", md: "133px" }} pt={"77px"}>
           <Accordion>
             <AccordionItem
-              border={"1px solid #ffff"}
+              border={"1px solid #F7F9FC"}
               rounded={"15px"}
-              bg={"#ffff"}
-              boxShadow="base"
+              bg={"#F7F9FC"}
               mb={"24px"}
             >
               <Heading>
-                <AccordionButton>
+                <AccordionButton bg={"#F7F9FC"}>
                   <Box as="span" flex="1" textAlign="left">
                     <Heading
                       fontSize={{ base: "16px", md: "20px" }}
@@ -217,10 +221,9 @@ const Page = () => {
               </AccordionPanel>
             </AccordionItem>
             <AccordionItem
-              border={"1px solid #ffff"}
+              border={"1px solid #F7F9FC"}
               rounded={"15px"}
-              bg={"#ffff"}
-              boxShadow="base"
+              bg={"#F7F9FC"}
               mb={"24px"}
             >
               <Heading>
@@ -247,10 +250,9 @@ const Page = () => {
               </AccordionPanel>
             </AccordionItem>
             <AccordionItem
-              border={"1px solid #ffff"}
+              border={"1px solid #F7F9FC"}
               rounded={"15px"}
-              bg={"#ffff"}
-              boxShadow="base"
+              bg={"#F7F9FC"}
             >
               <Heading>
                 <AccordionButton>
@@ -283,7 +285,6 @@ const Page = () => {
         {/* <Box px={"163px"}>
             <CTA />
           </Box> */}
-
         <Box
           position="relative"
           px={{ base: "16px", md: "163px" }}
@@ -296,10 +297,10 @@ const Page = () => {
             alt="star left"
             position="absolute"
             display={{ base: "none", md: "block" }}
-            bottom="400px"
-            left="30px"
-            width="84.07px"
-            height="108.65px"
+            top="100px"
+            left="25px"
+            width="130px"
+            height="125px"
           />
 
           {/* Right star */}
@@ -308,10 +309,11 @@ const Page = () => {
             alt="star right"
             position="absolute"
             display={{ base: "none", md: "block" }}
-            top="43%"
+            top="50%"
+            transform="translateY(-50%)"
             right="90px"
-            width="102.56px"
-            height="132.54px"
+            width="130px"
+            height="125px"
           />
 
           <CTA />
