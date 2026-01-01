@@ -125,10 +125,10 @@ export default function Home() {
           src="/images/video-star.png"
           alt="video star"
           position="absolute"
-          bottom="650px"
-          left="472px"
-          width="126.81px"
-          height="99.39px"
+          bottom="602px"
+          left="450px"
+          width="130px"
+          height="130px"
           display={{ base: "none", md: "block" }}
         />
 
@@ -163,7 +163,7 @@ export default function Home() {
           alt="single star"
           position="absolute"
           bottom="650px"
-          right="472px"
+          right="479px"
           width="57.58px"
           height="57.58px"
           display={{ base: "none", md: "block" }}

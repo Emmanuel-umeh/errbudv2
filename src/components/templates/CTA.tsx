@@ -63,8 +63,8 @@ const CTA = () => {
       {/* Mobile */}
       <Box
         w={{ base: "100%", md: "1114px" }}
-        h={{ base: "auto", md: "410px" }}
-        py={{ base: "48px", md: "0" }}
+        h={{ base: "100%", md: "410px" }}
+        py={{ base: "80px", md: "0" }}
         px={{ base: "20px", md: "0" }}
         backgroundImage="url('/images/cta-banner.png')"
         backgroundSize="cover"
