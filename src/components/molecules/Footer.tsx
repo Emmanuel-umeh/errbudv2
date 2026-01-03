@@ -93,7 +93,7 @@ const Footer = () => {
               <Link href="#" style={{ color: "#667185" }}>
                 Terms of Service
               </Link>
-              <Link href="#" style={{ color: "#667185" }}>
+              <Link href="/privacy-policy" style={{ color: "#667185" }}>
                 Privacy Policy
               </Link>
             </Stack>
