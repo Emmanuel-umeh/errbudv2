@@ -38,15 +38,15 @@ const Navbar = () => {
         <VStack display={{ base: "none", md: "flex" }}>
           <List display="flex" flexDirection="row" gap="16px">
             <ListItem fontWeight={600} fontSize="16px" fontFamily="heading">
-              <Link href="#how-it-works">How it Works</Link>
+              <Link href="/#how-it-works">How it Works</Link>
             </ListItem>
 
             <ListItem fontWeight={600} fontSize="16px" fontFamily="heading">
-              <Link href="#video-area">Video Area</Link>
+              <Link href="/#video-area">Video Area</Link>
             </ListItem>
 
             <ListItem fontWeight={600} fontSize="16px" fontFamily="heading">
-              <Link href="#testimonials">Testimonials</Link>
+              <Link href="/#testimonials">Testimonials</Link>
             </ListItem>
 
             <ListItem fontWeight={600} fontSize="16px" fontFamily="heading">
@@ -96,15 +96,15 @@ const Navbar = () => {
             animation="slideDown 0.25s ease-out"
           >
             <VStack spacing="20px" alignItems="center">
-              <Link href="#how-it-works" onClick={onToggle}>
+              <Link href="/#how-it-works" onClick={onToggle}>
                 How it Works
               </Link>
 
-              <Link href="#video-area" onClick={onToggle}>
+              <Link href="/#video-area" onClick={onToggle}>
                 Video Area
               </Link>
 
-              <Link href="#testimonials" onClick={onToggle}>
+              <Link href="/#testimonials" onClick={onToggle}>
                 Testimonials
               </Link>
 

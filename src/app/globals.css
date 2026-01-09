@@ -43,12 +43,12 @@ a {
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #ededed;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #ededed;
     --foreground: #ededed;
   }
 }
@@ -81,8 +81,8 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: white) {
   html {
-    color-scheme: dark;
+    color-scheme: white;
   }
 }

@@ -107,7 +107,7 @@ export default function Home() {
           left="40px"
           width={{ base: "120px", md: "114px" }}
           height={{ base: "120px", md: "110px" }}
-          display={{ base: "none", md: "block" }}
+          display={{ base: "none", md: "none", lg: "block" }}
         />
         <Image
           src="/images/left-ellipse.png"
@@ -115,9 +115,8 @@ export default function Home() {
           position="absolute"
           top={{ base: "350px", md: "290px" }}
           left="0px"
-          width={{ base: "100px", md: "250px" }}
-          height={{ base: "300px", md: "400px" }}
-          zIndex={3}
+          width={{ base: "100px", md: "100px", lg: "250px" }}
+          height={{ base: "300px", md: "200px", lg: "400px" }}
         />
 
         {/* Video star desktop */}
@@ -125,11 +124,11 @@ export default function Home() {
           src="/images/video-star.png"
           alt="video star"
           position="absolute"
-          bottom="602px"
-          left="450px"
-          width="130px"
-          height="130px"
-          display={{ base: "none", md: "block" }}
+          bottom={{ base: "", md: "495px", lg: "602px" }}
+          left={{ base: "", md: "90px", lg: "300px", xl: "400px" }}
+          width={{ base: "", md: "120px", lg: "130px" }}
+          height={{ base: "", md: "120px", lg: "130px" }}
+          display={{ base: "none", md: "block", lg: "block" }}
         />
 
         {/* Video star mobile */}
@@ -137,8 +136,8 @@ export default function Home() {
           src="/images/video-star.png"
           alt="video star"
           position="absolute"
-          top="695px"
-          right="265px"
+          top="660px"
+          right="258px"
           width="110px"
           height="100px"
           display={{ base: "block", md: "none" }}
@@ -149,7 +148,7 @@ export default function Home() {
           src="/images/single-star.png"
           alt="single star"
           position="absolute"
-          top="700px"
+          top="670px"
           left="300px"
           width="57.58px"
           height="57.58px"
@@ -162,21 +161,22 @@ export default function Home() {
           src="/images/single-star.png"
           alt="single star"
           position="absolute"
-          bottom="650px"
-          right="479px"
-          width="57.58px"
-          height="57.58px"
-          display={{ base: "none", md: "block" }}
+          bottom={{ base: "", md: "500px", lg: "630px" }}
+          right={{ base: "", md: "110px", lg: "320px", xl: "475px" }}
+          width={{ base: "50px", md: "50px", lg: "57.58px" }}
+          height={{ base: "50px", md: "50px", lg: "57.58px" }}
+          display={{ base: "none", md: "block", lg: "block" }}
         />
 
         <Image
           src="/images/right-ellipse.png"
           alt="right ellipse"
           position="absolute"
-          bottom="750px"
-          right="0px"
-          width="300px"
-          height="400px"
+          bottom={{ base: "", md: "0px", lg: "750px" }}
+          top={{ base: "", md: "190px", lg: "" }}
+          right={{ base: "", md: "0px", lg: "0px" }}
+          width={{ base: "", md: "140px", lg: "300px" }}
+          height={{ base: "", md: "200px", lg: "400px" }}
           display={{ base: "none", md: "block" }}
         />
 
@@ -185,17 +185,17 @@ export default function Home() {
           <Image
             src="/images/left-star.png"
             alt="star left"
-            width={{ base: "80px", md: "100px" }}
-            height={{ base: "80px", md: "100px" }}
-            display={{ base: "block", md: "none" }}
+            width={{ base: "80px", md: "90px", lg: "100px" }}
+            height={{ base: "80px", md: "90px", lg: "100px" }}
+            display={{ base: "block", md: "block", lg: "none" }}
           />
 
           <SimpleGrid
             columns={{ base: 1, md: 2 }}
-            px={{ base: "16px", md: "163px" }}
+            px={{ base: "16px", md: "16px", lg: "163px" }}
             id="how-it-works"
           >
-            <Box>
+            <Box position="relative" zIndex={{ base: "", md: "auto", lg: "" }}>
               <Text
                 fontSize={{ base: "14px", md: "16px" }}
                 fontWeight={500}
@@ -207,7 +207,7 @@ export default function Home() {
               <Heading
                 color="#1D2739"
                 fontWeight={600}
-                fontSize={{ base: "24px", md: "36px" }}
+                fontSize={{ base: "24px", md: "24px", lg: "36px" }}
                 lineHeight={{ base: "120%", md: "normal" }}
                 mb="8px"
               >
@@ -218,7 +218,7 @@ export default function Home() {
 
               <Text
                 fontWeight={500}
-                fontSize={{ base: "14px", md: "18px" }}
+                fontSize={{ base: "12px", md: "14px", lg: "18px" }}
                 color="#667185"
                 lineHeight="145%"
               >
@@ -237,15 +237,15 @@ export default function Home() {
             </Box>
 
             <Box
-              pt="45px"
+              pt={{ base: "45px", md: "", lg: "45px" }}
               position="relative"
               zIndex={{ base: 10, md: "auto" }}
             >
               <Image
                 src="/images/hero-image-2.png"
                 alt="hero image"
-                height={{ base: "267.84px", md: "370px" }}
-                width={{ base: "367.57px", md: "507.78px" }}
+                height={{ base: "267.84px", md: "100%", lg: "370px" }}
+                width={{ base: "367.57px", md: "100%", lg: "507.78px" }}
               />
             </Box>
           </SimpleGrid>
@@ -296,14 +296,14 @@ export default function Home() {
 
           <SimpleGrid
             columns={{ base: 1, md: 3 }}
-            spacing="33px"
+            spacing={{ base: "33px", md: "20px", lg: "33px" }}
             mt={{ base: "32px", md: "40px" }}
           >
             <Box>
               <Image
                 src="/images/cleaning-1.png"
                 alt="cleaning image"
-                height="432px"
+                height={{ base: "", md: "", lg: "432px" }}
                 rounded="md"
                 transition="all 0.3s ease"
                 _hover={{
@@ -317,7 +317,7 @@ export default function Home() {
               <Image
                 src="/images/cleaning-2.png"
                 alt="cleaning image"
-                width="349px"
+                width={{ base: "", md: "", lg: "349px" }}
                 rounded="md"
                 transition="all 0.3s ease"
                 _hover={{
@@ -331,8 +331,8 @@ export default function Home() {
               <Image
                 src="/images/cleaning-3.png"
                 alt="cleaning image"
-                height="432px"
-                width="349px"
+                height={{ base: "", md: "", lg: "432px" }}
+                width={{ base: "", md: "", lg: "349px" }}
                 rounded="md"
                 transition="all 0.3s ease"
                 _hover={{
@@ -346,15 +346,24 @@ export default function Home() {
       </Box>
 
       {/* Testimonials */}
+
       <Box
         bg="#EFF3FF"
         mt="54px"
         py="63.97px"
-        px={{ base: "16px", md: "163px" }}
+        px={{
+          base: "16px", // mobile
+          md: "48px", // tablets
+          lg: "96px", // small laptops
+          xl: "163px", // large screens (original)
+        }}
         style={{ borderRadius: "47% 100% 53% 48% / 6% 12% 10% 14%" }}
         id="testimonials"
       >
-        <SimpleGrid columns={{ base: 1, md: 2 }}>
+        <SimpleGrid
+          columns={{ base: 1, lg: 2 }} // 2 columns only on laptops+
+          spacing={{ base: "32px", lg: "0" }}
+        >
           <Center>
             <Box>
               <Text
@@ -368,7 +377,7 @@ export default function Home() {
               <Heading
                 color="#1D2739"
                 fontWeight={600}
-                fontSize={{ base: "24px", md: "36px" }}
+                fontSize={{ base: "24px", md: "28px", lg: "36px" }}
                 mb="8px"
               >
                 Trusted by Homes & Businesses
@@ -380,20 +389,20 @@ export default function Home() {
                 fontSize="18px"
                 color="#667185"
                 lineHeight="145%"
-                display={{ base: "none", md: "block" }}
+                display={{ base: "none", lg: "block" }}
               >
                 From busy professionals to families and businesses, <br />
                 people choose Errbud for its reliability, professionalism,
                 <br /> and ease of use.
               </Text>
 
-              {/* Mobile */}
+              {/* Mobile / Tablet */}
               <Text
                 fontWeight={400}
                 fontSize="14px"
                 color="#667185"
                 lineHeight="145%"
-                display={{ base: "block", md: "none" }}
+                display={{ base: "block", lg: "none" }}
               >
                 From busy professionals to families and businesses, <br />
                 people choose Errbud for its reliability, <br />
@@ -402,7 +411,7 @@ export default function Home() {
             </Box>
           </Center>
 
-          <Box pt={{ base: "37px", md: "0" }} position="relative">
+          <Box pt={{ base: "37px", lg: "0" }} position="relative">
             {/* Top fade overlay */}
             <Box
               position="absolute"
@@ -433,37 +442,30 @@ export default function Home() {
       </Box>
 
       {/* CTA */}
-      <Box
-        position="relative"
-        px={{ base: "16px", md: "163px" }}
-        mt="79px"
-        py={{ base: "48px", md: "89px" }}
-      >
-        {/* Left star */}
+
+      <Box position="relative" mt={"79px"} mb={{ base: "60px", md: "89px" }}>
         <Image
           src="/images/left-star.png"
           alt="star left"
           position="absolute"
-          display={{ base: "none", md: "block" }}
-          top="100px"
+          display={{ base: "none", md: "none", lg: "block" }}
+          top="20px"
           left="25px"
           width="130px"
           height="125px"
         />
 
-        {/* Right star */}
         <Image
           src="/images/right-star.png"
           alt="star right"
           position="absolute"
-          display={{ base: "none", md: "block" }}
+          display={{ base: "none", md: "none", lg: "block" }}
           top="50%"
           transform="translateY(-50%)"
-          right="90px"
+          right="30px"
           width="130px"
           height="125px"
         />
-
         <CTA />
       </Box>
 

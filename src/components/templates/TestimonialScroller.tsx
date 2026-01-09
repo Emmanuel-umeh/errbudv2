@@ -9,7 +9,16 @@ const TestimonialScroller = () => {
   const items = [...testimonials, ...testimonials];
 
   return (
-    <Box position="relative" h="420px" overflow="hidden" w="full">
+    <Box
+      position="relative"
+      h={{
+        base: "420px", // mobile
+        md: "480px", // tablets
+        lg: "420px", // laptops+
+      }}
+      overflow="hidden"
+      w="full"
+    >
       {/* Scrolling content */}
       <MotionBox
         animate={{ y: ["0%", "-50%"] }}
@@ -19,29 +28,51 @@ const TestimonialScroller = () => {
           ease: "linear",
         }}
       >
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+        <SimpleGrid
+          columns={{
+            base: 1,
+            md: 1, // tablets stay single column
+            lg: 2, // small laptops
+            xl: 2,
+          }}
+          spacing={{
+            base: 4,
+            md: 5,
+            lg: 6,
+          }}
+        >
           {items.map((item, index) => (
             <TestimonialCard key={index} {...item} />
           ))}
         </SimpleGrid>
       </MotionBox>
 
-      {/* Fade overlay */}
+      {/* Top fade overlay */}
       <Box
         position="absolute"
         top={0}
         left={0}
         right={0}
-        h="80px"
+        h={{
+          base: "60px",
+          md: "70px",
+          lg: "80px",
+        }}
         bgGradient="linear(to-b, white, transparent)"
         pointerEvents="none"
       />
+
+      {/* Bottom fade overlay */}
       <Box
         position="absolute"
         bottom={0}
         left={0}
         right={0}
-        h="80px"
+        h={{
+          base: "60px",
+          md: "70px",
+          lg: "80px",
+        }}
         bgGradient="linear(to-t, white, transparent)"
         pointerEvents="none"
       />

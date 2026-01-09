@@ -7,6 +7,8 @@ import {
   HStack,
   Icon,
   Image,
+  List,
+  ListItem,
   Stack,
   Text,
 } from "@chakra-ui/react";
@@ -18,7 +20,11 @@ const Footer = () => {
     <Box
       bg="white"
       py="40px"
-      px={{ base: 6, md: 20 }}
+      px={{
+        base: 6, // mobile
+        md: 10, // tablets
+        lg: 20, // desktop (original)
+      }}
       position="relative"
       overflow="hidden"
     >
@@ -26,8 +32,16 @@ const Footer = () => {
       <Box position="relative" zIndex={2}>
         {/* Top Section */}
         <Grid
-          templateColumns={{ base: "1fr", md: "2fr 1fr 1fr 1fr 1fr" }}
-          gap={"54px"}
+          templateColumns={{
+            base: "1fr",
+            md: "1fr 1fr", // tablets: 2 columns
+            lg: "2fr 1fr 1fr 1fr 1fr", // desktop (original)
+          }}
+          gap={{
+            base: "40px",
+            md: "48px",
+            lg: "54px",
+          }}
         >
           {/* Brand */}
           <GridItem>
@@ -36,7 +50,7 @@ const Footer = () => {
                 src="/images/Errbud-logo-2.png"
                 alt="Errbud logo"
                 width="171px"
-                height={"45.48px"}
+                height="45.48px"
               />
 
               <Text fontSize="16px" color="#1D2739" fontWeight={400}>
@@ -64,29 +78,34 @@ const Footer = () => {
           {/* Quick Links */}
           <GridItem>
             <Stack spacing={3}>
-              <Text fontSize="18px" fontWeight={600} color={"#1D2739"}>
+              <Text fontSize="18px" fontWeight={600} color="#1D2739">
                 Quick Links
               </Text>
 
-              <Link href="#" style={{ color: "#667185" }}>
-                Home
-              </Link>
-              <Link href="#" style={{ color: "#667185" }}>
-                How It Works
-              </Link>
-              <Link href="#" style={{ color: "#667185" }}>
-                Testimonials
-              </Link>
-              <Link href="#" style={{ color: "#667185" }}>
-                Contact
-              </Link>
+              <List style={{ color: "#667185" }} spacing={3}>
+                <ListItem>
+                  <Link href="/">Home</Link>
+                </ListItem>
+
+                <ListItem>
+                  <Link href="/#how-it-works">How it Works</Link>
+                </ListItem>
+
+                <ListItem>
+                  <Link href="/#testimonials">Testimonials</Link>
+                </ListItem>
+
+                <ListItem>
+                  <Link href="/contact-us">Contact</Link>
+                </ListItem>
+              </List>
             </Stack>
           </GridItem>
 
           {/* Support */}
           <GridItem>
             <Stack spacing={3}>
-              <Text fontSize="18px" fontWeight={600} color={"#1D2739"}>
+              <Text fontSize="18px" fontWeight={600} color="#1D2739">
                 Support
               </Text>
 
@@ -102,14 +121,14 @@ const Footer = () => {
           {/* Contact */}
           <GridItem>
             <Stack spacing={3}>
-              <Text fontSize="18px" fontWeight={600} color={"#1D2739"}>
+              <Text fontSize="18px" fontWeight={600} color="#1D2739">
                 Contact Us
               </Text>
 
-              <Text fontSize="14px" color={"#667185"}>
+              <Text fontSize="14px" color="#667185">
                 info@errbud.com
               </Text>
-              <Text fontSize="14px" color={"#667185"}>
+              <Text fontSize="14px" color="#667185">
                 errbud.com
               </Text>
             </Stack>
@@ -118,7 +137,7 @@ const Footer = () => {
           {/* Socials */}
           <GridItem>
             <Stack spacing={3}>
-              <Text fontSize="18px" fontWeight={600} color={"#1D2739"}>
+              <Text fontSize="18px" fontWeight={600} color="#1D2739">
                 Socials
               </Text>
 
@@ -127,19 +146,19 @@ const Footer = () => {
                   as={FaInstagram}
                   boxSize={5}
                   cursor="pointer"
-                  color={"#667185"}
+                  color="#667185"
                 />
                 <Icon
                   as={FaXTwitter}
                   boxSize={5}
                   cursor="pointer"
-                  color={"#667185"}
+                  color="#667185"
                 />
                 <Icon
                   as={FaLinkedinIn}
                   boxSize={5}
                   cursor="pointer"
-                  color={"#667185"}
+                  color="#667185"
                 />
               </HStack>
             </Stack>
@@ -147,20 +166,20 @@ const Footer = () => {
         </Grid>
 
         {/* Bottom Section */}
-        <Box mt={"104px"} textAlign="center">
+        <Box mt={{ base: "64px", md: "80px", lg: "104px" }} textAlign="center">
           <Text fontSize="14px" color="#1D2739">
             © 2025 Errbud. All rights reserved.
           </Text>
         </Box>
       </Box>
 
-      {/* Decorative Figures (BEHIND CONTENT) */}
+      {/* Decorative Figures */}
       <Image
         src="/images/happy-figure-left.png"
         alt="Happy figure left"
         position="absolute"
-        left={{ base: "-40px", md: "0" }}
-        bottom={{ base: "400px", md: "40px" }}
+        left={{ base: "-40px", md: "-20px", lg: "0" }}
+        bottom={{ base: "420px", md: "220px", lg: "40px" }}
         width="222.34px"
         height="250px"
         zIndex={1}
@@ -170,8 +189,8 @@ const Footer = () => {
         src="/images/happy-figure-right.png"
         alt="Happy figure right"
         position="absolute"
-        right={{ base: "-40px", md: "0" }}
-        bottom={{ base: "80px", md: "40px" }}
+        right={{ base: "-40px", md: "-20px", lg: "0" }}
+        bottom={{ base: "80px", md: "120px", lg: "40px" }}
         width="222.34px"
         height="250px"
         zIndex={1}

@@ -46,19 +46,19 @@ const Page = () => {
 
         {/* Main Content */}
         <SimpleGrid
-          columns={{ base: 1, md: 2 }}
-          spacing={{ base: "72px", md: "135px" }}
+          columns={{ base: 1, md: 1, lg: 2 }}
+          spacing={{ base: "72px", md: "80px", lg: "135px" }}
           alignItems="center"
-          mt={"55px"}
-          pl={{ base: 6, md: "49.81px" }}
-          pr={{ base: 6, md: "50.19px" }}
+          mt="55px"
+          pl={{ base: 6, md: 10, lg: "49.81px" }}
+          pr={{ base: 6, md: 10, lg: "50.19px" }}
         >
           {/* Left Content */}
-          <Stack spacing={"8px"}>
+          <Stack spacing="8px">
             <Box>
               <Text
                 fontWeight={{ base: 400, md: 500 }}
-                fontSize={{ base: "14px", md: "16px" }}
+                fontSize={{ base: "14px", md: "15px", lg: "16px" }}
                 color="whiteAlpha.800"
               >
                 CONTACT
@@ -66,37 +66,37 @@ const Page = () => {
 
               <Heading
                 fontWeight={600}
-                fontSize={{ base: "32px", md: "56px" }}
+                fontSize={{ base: "32px", md: "44px", lg: "56px" }}
                 color="white"
                 lineHeight="100%"
-                letterSpacing={"-4%"}
+                letterSpacing="-4%"
               >
                 Get in Touch
               </Heading>
             </Box>
 
-            {/* For desktop */}
+            {/* Desktop */}
             <Text
               fontSize="18px"
               fontWeight={500}
               color="#FFFFFF"
-              display={{ base: "none", md: "block" }}
+              display={{ base: "none", lg: "block" }}
             >
               Have questions, partnership ideas, or want to contract our <br />
               cleaning services for your business? We’d love to hear <br /> from
               you.
             </Text>
 
-            {/* For mobile */}
+            {/* Mobile + Tablet */}
             <Text
-              fontSize="14px"
+              fontSize={{ base: "14px", md: "16px" }}
               color="#FFFFFF"
               fontWeight={400}
-              display={{ base: "block", md: "none" }}
+              display={{ base: "block", lg: "none" }}
             >
-              Have questions, partnership ideas, or want to <br /> contract our
-              cleaning services for your business? <br /> We’d love to hear from
-              you.
+              Have questions, partnership ideas, or want to <br />
+              contract our cleaning services for your business? <br />
+              We’d love to hear from you.
             </Text>
           </Stack>
 
@@ -118,7 +118,11 @@ const Page = () => {
           Other Ways To Reach Us
         </Heading>
 
-        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={"23px"} mt={"40px"}>
+        <SimpleGrid
+          columns={{ base: 1, md: 2, lg: 3 }}
+          spacing="23px"
+          mt="40px"
+        >
           <ContactCard
             icon={
               <BiMessageAltDetail
@@ -133,6 +137,7 @@ const Page = () => {
             title="Email"
             link="info@errbud.com"
           />
+
           <ContactCard
             icon={
               <FaXTwitter
@@ -147,20 +152,28 @@ const Page = () => {
             title="Twitter"
             link="@errbud"
           />
-          <ContactCard
-            icon={
-              <FaLinkedin
-                style={{
-                  color: "#4A90E2",
-                  width: "26.67px",
-                  height: "26.75px",
-                  borderRadius: "10px",
-                }}
-              />
-            }
-            title="Linkedin"
-            link="Errand Buddy Ltd"
-          />
+
+          {/* Center this card on md */}
+          <Box
+            gridColumn={{ md: "1 / -1", lg: "auto" }}
+            display="flex"
+            justifyContent="center"
+          >
+            <ContactCard
+              icon={
+                <FaLinkedin
+                  style={{
+                    color: "#4A90E2",
+                    width: "26.67px",
+                    height: "26.75px",
+                    borderRadius: "10px",
+                  }}
+                />
+              }
+              title="Linkedin"
+              link="Errand Buddy Ltd"
+            />
+          </Box>
         </SimpleGrid>
       </VStack>
 
@@ -282,40 +295,29 @@ const Page = () => {
 
         {/* CTA section */}
 
-        {/* <Box px={"163px"}>
-            <CTA />
-          </Box> */}
-        <Box
-          position="relative"
-          px={{ base: "16px", md: "163px" }}
-          mt="79px"
-          py={{ base: "48px", md: "89px" }}
-        >
-          {/* Left star */}
+        <Box position="relative" mt={"79px"} mb={{ base: "60px", md: "89px" }}>
           <Image
             src="/images/left-star-white.png"
             alt="star left"
             position="absolute"
-            display={{ base: "none", md: "block" }}
-            top="100px"
+            display={{ base: "none", md: "none", lg: "block" }}
+            top="20px"
             left="25px"
             width="130px"
             height="125px"
           />
 
-          {/* Right star */}
           <Image
             src="/images/right-star-white.png"
             alt="star right"
             position="absolute"
-            display={{ base: "none", md: "block" }}
+            display={{ base: "none", md: "none", lg: "block" }}
             top="50%"
             transform="translateY(-50%)"
-            right="90px"
+            right="30px"
             width="130px"
             height="125px"
           />
-
           <CTA />
         </Box>
       </Box>
