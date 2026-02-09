@@ -5,22 +5,17 @@ import TestimonialScroller from "@/components/templates/TestimonialScroller";
 
 import {
   Box,
-  Button,
   Center,
   Heading,
   Image,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
   SimpleGrid,
   Stack,
   Text,
   VStack,
 } from "@chakra-ui/react";
-
 import Link from "next/link";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+
+import SignUpDropdown from "@/components/molecules/SignUpDropdown";
 
 export default function Home() {
   return (
@@ -103,33 +98,7 @@ export default function Home() {
               />
             </Button> */}
 
-            <Menu>
-              <MenuButton
-                as={Button}
-                rightIcon={
-                  <MdOutlineKeyboardArrowDown
-                    style={{ width: "20px", height: "20px" }}
-                  />
-                }
-                rounded="full"
-                display="flex"
-                alignItems="center"
-                gap="4px"
-                h="47px"
-                px="16px"
-                bg={"#4A90E2"}
-                color={"white"}
-              >
-                Try our services
-              </MenuButton>
-              <MenuList>
-                <MenuItem>Download</MenuItem>
-                <MenuItem>Create a Copy</MenuItem>
-                <MenuItem>Mark as Draft</MenuItem>
-                <MenuItem>Delete</MenuItem>
-                <MenuItem>Attend a Workshop</MenuItem>
-              </MenuList>
-            </Menu>
+            <SignUpDropdown triggerLabel="Try our services" placement="bottom" />
           </Box>
         </Box>
       </VStack>
