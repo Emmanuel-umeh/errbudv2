@@ -98,7 +98,9 @@ export default function Home() {
               />
             </Button> */}
 
-            <SignUpDropdown triggerLabel="Try our services" placement="bottom" />
+            <Box display={{ base: "none", md: "block" }}>
+              <SignUpDropdown triggerLabel="Try our services" placement="bottom" />
+            </Box>
           </Box>
         </Box>
       </VStack>
