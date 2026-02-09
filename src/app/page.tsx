@@ -5,9 +5,14 @@ import TestimonialScroller from "@/components/templates/TestimonialScroller";
 
 import {
   Box,
+  Button,
   Center,
   Heading,
   Image,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
   SimpleGrid,
   Stack,
   Text,
@@ -15,6 +20,7 @@ import {
 } from "@chakra-ui/react";
 
 import Link from "next/link";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 export default function Home() {
   return (
@@ -72,7 +78,6 @@ export default function Home() {
               />
             </Link>
             <Link href={"/"}>
-              {" "}
               <Image
                 src={"/images/Apple-store.png"}
                 alt="store"
@@ -80,6 +85,51 @@ export default function Home() {
                 width={"120px"}
               />
             </Link>
+
+            {/* Button */}
+            {/* <Button
+              rounded="full"
+              display="flex"
+              alignItems="center"
+              gap="4px"
+              h="47px"
+              px="16px"
+              bg={"#4A90E2"}
+              color={"white"}
+            >
+              Try our services
+              <MdOutlineKeyboardArrowDown
+                style={{ width: "16px", height: "16px" }}
+              />
+            </Button> */}
+
+            <Menu>
+              <MenuButton
+                as={Button}
+                rightIcon={
+                  <MdOutlineKeyboardArrowDown
+                    style={{ width: "20px", height: "20px" }}
+                  />
+                }
+                rounded="full"
+                display="flex"
+                alignItems="center"
+                gap="4px"
+                h="47px"
+                px="16px"
+                bg={"#4A90E2"}
+                color={"white"}
+              >
+                Try our services
+              </MenuButton>
+              <MenuList>
+                <MenuItem>Download</MenuItem>
+                <MenuItem>Create a Copy</MenuItem>
+                <MenuItem>Mark as Draft</MenuItem>
+                <MenuItem>Delete</MenuItem>
+                <MenuItem>Attend a Workshop</MenuItem>
+              </MenuList>
+            </Menu>
           </Box>
         </Box>
       </VStack>

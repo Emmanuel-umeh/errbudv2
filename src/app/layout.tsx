@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import ChakraUIProvider from "@/providers/ChakraProvider";
+import ReactQueryProvider from "@/providers/ReactQueryProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "Need a cleaner? Errbud helps you find trusted, verified cleaners near you, easy booking, flexible service.",
 
-    openGraph: {
+  openGraph: {
     title: "Errbud",
     description:
       "Need a cleaner? Errbud helps you find trusted, verified cleaners near you, easy booking, flexible service.",
@@ -54,7 +55,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${poppins.variable}`}>
-        <ChakraUIProvider>{children}</ChakraUIProvider>
+        <ChakraUIProvider>
+          <ReactQueryProvider>{children}</ReactQueryProvider>
+        </ChakraUIProvider>
       </body>
     </html>
   );
